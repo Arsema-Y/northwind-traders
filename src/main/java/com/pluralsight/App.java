@@ -33,13 +33,21 @@ public class App {
                 FROM products""";
 
         //try
-        //connect
-        //prepare
+          //connect
+         //prepare
         //resultset
-        //next
-        //catch
+       //next
+     //catch
+
+        try(Connection connection = dataSource.getConnection();
+            PreparedStatement prepStat = connection.prepareStatement(sql);
+            ResultSet result = prepStat.executeQuery();){
 
 
 
+        }catch(SQLException e){
+            System.out.println("SQLException: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
