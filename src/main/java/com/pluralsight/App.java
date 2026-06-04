@@ -27,14 +27,18 @@ public class App {
 
 
         //query
-
+        String sql = """
+                SELECT ProductID,
+                ProductName
+                FROM products""";
 
         //try
-          //connect
-         //prepare
+        //connect
+        //prepare
         //resultset
-       //next
-     //catch
+        //next
+        //catch
+
 
 
     }
