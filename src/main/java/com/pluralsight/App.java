@@ -14,7 +14,7 @@ public class App {
     3. PrepStat.           |--->  in a try-catch (exception handler)
     4. Query -------------|______________________ +
     5. ResultSet : the display/result from query  |---->  while loop w next();
-    6. close res. (Auto)                 _________|
+    6. close resource. (Auto)            _________|
      */
     public static void main(String[] args) {
 
