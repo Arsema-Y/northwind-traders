@@ -43,7 +43,18 @@ public class App {
             PreparedStatement prepStat = connection.prepareStatement(sql);
             ResultSet result = prepStat.executeQuery();){
 
+            System.out.println("""
+                    PRODUCT ID  |  PRODUCT NAME
+                    -------------------------""");
 
+            while(result.next()){
+                int productId = result.getInt("ProductID");
+                String productName = result.getString("ProductName");
+
+                System.out.printf("%6d      |  %s \n", productId, productName);
+                System.out.println("  ------    +  ------");
+
+            }
 
         }catch(SQLException e){
             System.out.println("SQLException: " + e.getMessage());
