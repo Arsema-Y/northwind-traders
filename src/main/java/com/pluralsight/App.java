@@ -10,11 +10,11 @@ import java.sql.SQLException;
 public class App {
     /*
     1. Creat dataSource
-    2. Open con
-    3. PrepStat.
-    4. Query
-    5. ResultSet : the display/result from query
-    6. close res.
+    2. Open con ------------|
+    3. PrepStat.           |--->  in a try-catch (exception handler)
+    4. Query -------------|______________________ +
+    5. ResultSet : the display/result from query  |---->  while loop w next();
+    6. close res. (Auto)                 _________|
      */
     public static void main(String[] args) {
 
